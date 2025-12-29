@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GREAT HOPE SDA Church – Online Envelope</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <main class="page">
+    <section class="envelope" aria-label="Tithes and offerings online envelope">
+      <header class="envelope__header">
+        <div class="brand">
+          <div class="brand__logo">
+            <img
+              src="sda.png"
+              alt="Seventh-day Adventist Church logo"
+              class="brand__logo-img"
+            />
+          </div>
+
+          <div class="brand__text">
+            <h1 class="brand__title">GREAT HOPE SDA CHURCH</h1>
+            <p class="brand__subtitle">Tithes &amp; Offerings Online Envelope</p>
+          </div>
+
+          <div class="brand__spacer" aria-hidden="true"></div>
+        </div>
+      </header>
+
+      <div class="envelope__body">
+
+        <p class="notice">
+          Don't add commas, to the numbers. Enter 2000 instead of 2,000
+        </p>
+
+        <form class="give-form" id="giveForm">
+          <div class="field">
+            <label class="field__label field__label--caps" for="tithe">GOD'S TITHE 10%</label>
+            <input class="field__input money-input" id="tithe" name="tithe" type="text"
+                   placeholder="GOD'S TITHE 10%" inputmode="numeric" autocomplete="off" />
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="combined">Combined Offering 10%+</label>
+            <p class="field__help">
+              50% retained at local church level for local activities. 50% remitted
+              to conference for support of conference development and world mission activities.
+            </p>
+            <input class="field__input money-input" id="combined" name="combined" type="text"
+                   placeholder="Combined Offering 10%+" inputmode="numeric" autocomplete="off" />
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="campMeeting">Camp Meeting Offering</label>
+            <p class="field__help">
+              Supports worldwide mission activities, conference evangelism and institutional development projects.
+            </p>
+            <input class="field__input money-input" id="campMeeting" name="campMeeting" type="text"
+                   placeholder="Camp Meeting Offering" inputmode="numeric" autocomplete="off" />
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="campExpense">Camp Expense Offering</label>
+            <p class="field__help">Meets the cost of camp meeting event expense.</p>
+            <input class="field__input money-input" id="campExpense" name="campExpense" type="text"
+                   placeholder="Camp Expense Offering" inputmode="numeric" autocomplete="off" />
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="evConf">Evangelism (Conference)</label>
+            <input class="field__input money-input" id="evConf" name="evConf" type="text"
+                   placeholder="Evangelism (Conference)" inputmode="numeric" autocomplete="off" />
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="evLocal">Evangelism (Local Church)</label>
+            <input class="field__input money-input" id="evLocal" name="evLocal" type="text"
+                   placeholder="Evangelism (Local Church)" inputmode="numeric" autocomplete="off" />
+          </div>
+
+          <!-- Dynamically added fields will appear here -->
+          <div id="extraFields"></div>
+
+          <div class="total" aria-label="Total amount">
+            <div class="total__value">
+              <span class="total__currency">Kes</span><span class="total__amount" id="totalAmount">0</span>
+            </div>
+          </div>
+
+          <div class="actions">
+            <button class="btn btn--solid" type="button" id="openModalBtn">Add More Fields</button>
+
+            <!-- ✅ Proceed button-->
+            <button class="btn btn--outline" type="button" id="proceedBtn">
+              Proceed
+              <span class="btn__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M10 7l5 5-5 5" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </button>
+          </div>
+
+          <p class="verse">
+            <span>Return to Me all the Tithes Into the Storehouse</span><br />
+            <span class="verse__ref">Malachi 3:10</span>
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================= -->
+  <!-- 1) Add More Fields Modal  -->
+  <!-- ========================= -->
+  <div class="modal" id="fieldsModal" aria-hidden="true">
+    <div class="modal__backdrop" data-close="true"></div>
+
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal__header">
+        <div class="modal__title" id="modalTitle">Select Fields to Add</div>
+        <button class="modal__close" type="button" aria-label="Close" id="closeModalBtn">×</button>
+      </div>
+
+      <div class="modal__body">
+        <div class="checklist" id="fieldsChecklist">
+          <label class="checklist__item"><input type="checkbox" value="Thanksgiving"> Thanksgiving</label>
+          <label class="checklist__item"><input type="checkbox" value="Local Church Budget (LCB)"> Local Church Budget (LCB)</label>
+          <label class="checklist__item"><input type="checkbox" value="Adventist Women (AWM)"> Adventist Women (AWM)</label>
+          <label class="checklist__item"><input type="checkbox" value="Pathfinder Camporee"> Pathfinder Camporee</label>
+          <label class="checklist__item"><input type="checkbox" value="Couples Retreat"> Couples Retreat</label>
+          <label class="checklist__item"><input type="checkbox" value="Development"> Development</label>
+          <label class="checklist__item"><input type="checkbox" value="Children Ministry"> Children Ministry</label>
+          <label class="checklist__item"><input type="checkbox" value="Adventist Youth (AYM)"> Adventist Youth (AYM)</label>
+          <label class="checklist__item"><input type="checkbox" value="Adventist Men (AMO)"> Adventist Men (AMO)</label>
+          <label class="checklist__item"><input type="checkbox" value="Lunch"> Lunch</label>
+          <label class="checklist__item"><input type="checkbox" value="Pathfinder Club"> Pathfinder Club</label>
+          <label class="checklist__item"><input type="checkbox" value="Station Development Fund"> Station Development Fund</label>
+          <label class="checklist__item"><input type="checkbox" value="Adventurers Club"> Adventurers Club</label>
+          <label class="checklist__item"><input type="checkbox" value="VBS"> VBS</label>
+        </div>
+      </div>
+
+      <div class="modal__footer">
+        <button class="btn btn--cancel" type="button" id="cancelModalBtn">Cancel</button>
+        <button class="btn btn--solid" type="button" id="addSelectedBtn">Add Selected</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================= -->
+  <!-- 2) Proceed Payment Popup  -->
+  <!-- ========================= -->
+  <div class="modal paymodal" id="payModal" aria-hidden="true">
+    <div class="modal__backdrop" data-close="true"></div>
+
+    <div class="paymodal__dialog" role="dialog" aria-modal="true" aria-labelledby="payTitle">
+      <header class="paymodal__header">
+        <div class="brand brand--compact">
+          <div class="brand__logo">
+            <img
+              src="sda.png"
+              alt="Seventh-day Adventist Church logo"
+              class="brand__logo-img"
+            />
+          </div>
+
+          <div class="brand__text">
+            <h1 class="brand__title" id="payTitle">GREAT HOPE SDA CHURCH</h1>
+            <p class="brand__subtitle">Tithes &amp; Offerings Online Envelope</p>
+          </div>
+
+          <div class="brand__spacer" aria-hidden="true"></div>
+        </div>
+      </header>
+
+      <div class="paymodal__body">
+        <form id="payForm" class="payform">
+          <div class="field">
+            <label class="field__label" for="payerName">Full Name <span class="req">*</span></label>
+            <input class="field__input" id="payerName" name="payerName" type="text" required />
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="payerEmail">Email Address</label>
+            <input class="field__input field__input--soft" id="payerEmail" name="payerEmail" type="email" />
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="payerPhone">Phone Number (Safaricom) <span class="req">*</span></label>
+            <input class="field__input field__input--soft" id="payerPhone" name="payerPhone" type="tel"
+                   placeholder="07XXXXXXXX" inputmode="numeric" required />
+          </div>
+
+          <div class="payform__actions">
+            <button type="button" class="btn btn--outline btn--back" id="payBackBtn">
+              <span class="btn__icon btn__icon--left" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M14 7l-5 5 5 5" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              Back
+            </button>
+
+            <button type="submit" class="btn btn--solid btn--mpesa">MPESA Xpress</button>
+          </div>
+
+          <p class="verse">
+            <span>Return to Me all the Tithes Into the Storehouse</span><br />
+            <span class="verse__ref">Malachi 3:10</span>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
