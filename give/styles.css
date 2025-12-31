@@ -423,6 +423,45 @@ body.modal-open{ overflow: hidden; }
   background: var(--teal);
 }
 
+.site-footer{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  padding: 12px 14px;
+  font-size: clamp(14px, 2.5vw, 16px);
+  background: rgba(0,0,0,.04);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+}
+
+.site-footer__text{
+  text-align: center;
+  color: #333;
+}
+
+.site-footer__link{
+  color: #0a7cff;          /* professional blue */
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 4px;
+}
+
+.site-footer__link:hover{
+  text-decoration: underline;
+}
+
+
+
+.page{
+  padding-bottom: 48px;
+}
+
+
+
+
 /* Small screens */
 @media (max-width: 420px){
   .envelope__body{ padding: 16px 16px 14px; }

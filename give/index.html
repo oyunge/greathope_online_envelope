@@ -21,7 +21,7 @@
           </div>
 
           <div class="brand__text">
-            <h1 class="brand__title">GREAT HOPE SDA CHURCH</h1>
+            <h1 class="brand__title">GREAT HOPE SDA CHURCH UTHIRU</h1>
             <p class="brand__subtitle">Tithes &amp; Offerings Online Envelope</p>
           </div>
 
@@ -45,8 +45,8 @@
           <div class="field">
             <label class="field__label" for="combined">Combined Offering 10%+</label>
             <p class="field__help">
-              50% retained at local church level for local activities. 50% remitted
-              to conference for support of conference development and world mission activities.
+              50% remains with the local church to sustain local ministry, while 50% is forwarded to the conference
+              to advance conference development and world mission.
             </p>
             <input class="field__input money-input" id="combined" name="combined" type="text"
                    placeholder="Combined Offering 10%+" inputmode="numeric" autocomplete="off" />
@@ -55,29 +55,24 @@
           <div class="field">
             <label class="field__label" for="campMeeting">Camp Meeting Offering</label>
             <p class="field__help">
-              Supports worldwide mission activities, conference evangelism and institutional development projects.
-            </p>
+            Supports world mission, conference evangelism, and institutional development.            </p>
             <input class="field__input money-input" id="campMeeting" name="campMeeting" type="text"
                    placeholder="Camp Meeting Offering" inputmode="numeric" autocomplete="off" />
           </div>
-
-          <div class="field">
-            <label class="field__label" for="campExpense">Camp Expense Offering</label>
-            <p class="field__help">Meets the cost of camp meeting event expense.</p>
-            <input class="field__input money-input" id="campExpense" name="campExpense" type="text"
-                   placeholder="Camp Expense Offering" inputmode="numeric" autocomplete="off" />
+            <div class="field">
+            <label class="field__label" for="evConf">Development (Church Building)</label>
+            <input class="field__input money-input" id="evConf" name="devB" type="text"
+                   placeholder="Development (Church Building)" inputmode="numeric" autocomplete="off" />
           </div>
-
-          <div class="field">
-            <label class="field__label" for="evConf">Evangelism (Conference)</label>
-            <input class="field__input money-input" id="evConf" name="evConf" type="text"
-                   placeholder="Evangelism (Conference)" inputmode="numeric" autocomplete="off" />
+           <div class="field">
+            <label class="field__label" for="evConf">Local Church Budget</label>
+            <input class="field__input money-input" id="lcb" name="lcb" type="text"
+                   placeholder="Local Church Budget" inputmode="numeric" autocomplete="off" />
           </div>
-
-          <div class="field">
-            <label class="field__label" for="evLocal">Evangelism (Local Church)</label>
-            <input class="field__input money-input" id="evLocal" name="evLocal" type="text"
-                   placeholder="Evangelism (Local Church)" inputmode="numeric" autocomplete="off" />
+             <div class="field">
+            <label class="field__label" for="evConf">AMR</label>
+            <input class="field__input money-input" id="evConf" name="amr" type="text"
+                   placeholder="Annual Every Member Response" inputmode="numeric" autocomplete="off" />
           </div>
 
           <!-- Dynamically added fields will appear here -->
@@ -129,15 +124,15 @@
           <label class="checklist__item"><input type="checkbox" value="Thanksgiving"> Thanksgiving</label>
           <label class="checklist__item"><input type="checkbox" value="Local Church Budget (LCB)"> Local Church Budget (LCB)</label>
           <label class="checklist__item"><input type="checkbox" value="Adventist Women (AWM)"> Adventist Women (AWM)</label>
-          <label class="checklist__item"><input type="checkbox" value="Pathfinder Camporee"> Pathfinder Camporee</label>
-          <label class="checklist__item"><input type="checkbox" value="Couples Retreat"> Couples Retreat</label>
-          <label class="checklist__item"><input type="checkbox" value="Development"> Development</label>
-          <label class="checklist__item"><input type="checkbox" value="Children Ministry"> Children Ministry</label>
+          <label class="checklist__item"><input type="checkbox" value="Evangelism_conference"> Evangelism (Conference)</label>
+          <label class="checklist__item"><input type="checkbox" value="Evangelism"> Evangelism (Local church)</label>
+          <label class="checklist__item"><input type="checkbox" value="Good Samaritan"> Good Samaritan</label>
+          <label class="checklist__item"><input type="checkbox" value="Welfare"> Welfare</label>
           <label class="checklist__item"><input type="checkbox" value="Adventist Youth (AYM)"> Adventist Youth (AYM)</label>
           <label class="checklist__item"><input type="checkbox" value="Adventist Men (AMO)"> Adventist Men (AMO)</label>
           <label class="checklist__item"><input type="checkbox" value="Lunch"> Lunch</label>
           <label class="checklist__item"><input type="checkbox" value="Pathfinder Club"> Pathfinder Club</label>
-          <label class="checklist__item"><input type="checkbox" value="Station Development Fund"> Station Development Fund</label>
+          <label class="checklist__item"><input type="checkbox" value="Camp Expense Offering">Camp Expense</label>
           <label class="checklist__item"><input type="checkbox" value="Adventurers Club"> Adventurers Club</label>
           <label class="checklist__item"><input type="checkbox" value="VBS"> VBS</label>
         </div>
@@ -168,7 +163,7 @@
           </div>
 
           <div class="brand__text">
-            <h1 class="brand__title" id="payTitle">GREAT HOPE SDA CHURCH</h1>
+            <h1 class="brand__title" id="payTitle">GREAT HOPE SDA CHURCH UTHIRU</h1>
             <p class="brand__subtitle">Tithes &amp; Offerings Online Envelope</p>
           </div>
 
@@ -215,6 +210,14 @@
       </div>
     </div>
   </div>
-  <script src="app.js"></script>
-</body>
+  <footer class="site-footer" role="contentinfo">
+  <small class="site-footer__text">
+    Powered by
+    <a href="https://ke.zolasystems.net/" target="_blank" rel="noopener noreferrer" class="site-footer__link">
+      Zola System
+    </a>
+  </small>
+</footer>
+ <script src="app.js"></script>
+ </body>
 </html>

@@ -177,54 +177,42 @@
     if (payModal.classList.contains("is-open")) closePayModal();
   });
 
-  // Submit handler (wire STK push here)
-  payForm.addEventListener("submit", async (e) => {
-    e.preventDefault();
-
-    const name = document.getElementById("payerName").value.trim();
-    const email = document.getElementById("payerEmail").value.trim();
-    const phone = document.getElementById("payerPhone").value.trim();
-    const amount = Number(document.getElementById("totalAmount").textContent || "0");
-
-    // Example only:
-    // await fetch("/api/mpesa/stkpush", { method:"POST", headers:{ "Content-Type":"application/json" }, body: JSON.stringify({ name,email,phone,amount }) })
-
-    alert(`MPESA Xpress\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nAmount: Kes ${amount}`);
-  });
-
+  
   //stk push 
-//   payForm.addEventListener("submit", async (e) => {
-//   e.preventDefault();
+ payForm.addEventListener("submit", async (e) => {
+  e.preventDefault();
 
-//   const name = payerName.value.trim();
-//   const email = payerEmail.value.trim();
-//   const phone = payerPhone.value.trim();
-//   const amount = Number(document.getElementById("totalAmount").textContent);
+  const name = payerName.value.trim();
+  const email = payerEmail.value.trim();
+  const phone = payerPhone.value.trim();
+  const amount = Number(document.getElementById("totalAmount").textContent);
 
-//   if (!name || !phone || amount <= 0) {
-//     alert("Please enter valid payment details");
-//     return;
-//   }
+  if (!name || !phone || amount <= 0) {
+    alert("Please enter valid payment details");
+    return;
+  }
 
-//   try {
-//     const res = await fetch("/mpesa/stkpush", {
-//       method: "POST",
-//       headers: { "Content-Type": "application/json" },
-//       body: JSON.stringify({ name, email, phone, amount })
-//     });
+  try {
+    const res = await fetch("https://offering.kandiafreshtz.org/give/mpesa/stkpush.php", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, email, phone, amount })
+    });
 
-//     const data = await res.json();
+    const data = await res.json();
 
-//     if (data.ResponseCode === "0") {
-//       alert("STK Push sent! Please check your phone.");
-//       closePayModal();
-//     } else {
-//       alert("Failed to initiate payment");
-//     }
-//   } catch (err) {
-//     alert("Error connecting to payment service");
-//   }
-// });
+    if (data.ResponseCode === "0") {
+      alert("STK Push sent! Please check your phone.");
+      closePayModal();
+    } else {
+      alert(data.ResponseDescription || "Failed to initiate payment");
+    }
+  } catch (err) {
+    console.error(err);
+    alert("Error connecting to payment service");
+  }
+});
 
 })();
+
 

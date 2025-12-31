@@ -1,5 +1,9 @@
 <?php
-require "config.php";
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+require __DIR__ . "/config.php";
 
 header("Content-Type: application/json");
 
@@ -24,7 +28,7 @@ if (substr($phone, 0, 2) === "07") {
 }
 
 /* =========================
-   Get OAuth Token
+  Get OAuth Token
 ========================= */
 $url = MPESA_ENV === "live"
   ? "https://api.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials"
@@ -50,7 +54,7 @@ if (!$token) {
 }
 
 /* =========================
-   STK Push
+  STK Push
 ========================= */
 $timestamp = date("YmdHis");
 $password  = base64_encode(MPESA_SHORTCODE . MPESA_PASSKEY . $timestamp);
@@ -88,3 +92,4 @@ $result = curl_exec($ch);
 curl_close($ch);
 
 echo $result;
+
