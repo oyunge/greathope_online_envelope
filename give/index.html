@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -13,11 +14,7 @@
       <header class="envelope__header">
         <div class="brand">
           <div class="brand__logo">
-            <img
-              src="sda.png"
-              alt="Seventh-day Adventist Church logo"
-              class="brand__logo-img"
-            />
+            <img src="sda.png" alt="Seventh-day Adventist Church logo" class="brand__logo-img" />
           </div>
 
           <div class="brand__text">
@@ -38,8 +35,8 @@
         <form class="give-form" id="giveForm">
           <div class="field">
             <label class="field__label field__label--caps" for="tithe">GOD'S TITHE 10%</label>
-            <input class="field__input money-input" id="tithe" name="tithe" type="text"
-                   placeholder="GOD'S TITHE 10%" inputmode="numeric" autocomplete="off" />
+            <input class="field__input money-input" id="tithe" name="tithe" type="text" placeholder="GOD'S TITHE 10%"
+              inputmode="numeric" autocomplete="off" />
           </div>
 
           <div class="field">
@@ -49,30 +46,30 @@
               to advance conference development and world mission.
             </p>
             <input class="field__input money-input" id="combined" name="combined" type="text"
-                   placeholder="Combined Offering 10%+" inputmode="numeric" autocomplete="off" />
+              placeholder="Combined Offering 10%+" inputmode="numeric" autocomplete="off" />
           </div>
 
           <div class="field">
             <label class="field__label" for="campMeeting">Camp Meeting Offering</label>
             <p class="field__help">
-            Supports world mission, conference evangelism, and institutional development.            </p>
+              Supports world mission, conference evangelism, and institutional development. </p>
             <input class="field__input money-input" id="campMeeting" name="campMeeting" type="text"
-                   placeholder="Camp Meeting Offering" inputmode="numeric" autocomplete="off" />
+              placeholder="Camp Meeting Offering" inputmode="numeric" autocomplete="off" />
           </div>
-            <div class="field">
+          <div class="field">
             <label class="field__label" for="evConf">Development (Church Building)</label>
             <input class="field__input money-input" id="evConf" name="devB" type="text"
-                   placeholder="Development (Church Building)" inputmode="numeric" autocomplete="off" />
+              placeholder="Development (Church Building)" inputmode="numeric" autocomplete="off" />
           </div>
-           <div class="field">
+          <div class="field">
             <label class="field__label" for="evConf">Local Church Budget</label>
-            <input class="field__input money-input" id="lcb" name="lcb" type="text"
-                   placeholder="Local Church Budget" inputmode="numeric" autocomplete="off" />
+            <input class="field__input money-input" id="lcb" name="lcb" type="text" placeholder="Local Church Budget"
+              inputmode="numeric" autocomplete="off" />
           </div>
-             <div class="field">
+          <div class="field">
             <label class="field__label" for="evConf">AMR</label>
             <input class="field__input money-input" id="evConf" name="amr" type="text"
-                   placeholder="Annual Every Member Response" inputmode="numeric" autocomplete="off" />
+              placeholder="Annual Every Member Response" inputmode="numeric" autocomplete="off" />
           </div>
 
           <!-- Dynamically added fields will appear here -->
@@ -92,7 +89,8 @@
               Proceed
               <span class="btn__icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24">
-                  <path d="M10 7l5 5-5 5" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M10 7l5 5-5 5" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
                 </svg>
               </span>
             </button>
@@ -122,13 +120,17 @@
       <div class="modal__body">
         <div class="checklist" id="fieldsChecklist">
           <label class="checklist__item"><input type="checkbox" value="Thanksgiving"> Thanksgiving</label>
-          <label class="checklist__item"><input type="checkbox" value="Local Church Budget (LCB)"> Local Church Budget (LCB)</label>
-          <label class="checklist__item"><input type="checkbox" value="Adventist Women (AWM)"> Adventist Women (AWM)</label>
-          <label class="checklist__item"><input type="checkbox" value="Evangelism_conference"> Evangelism (Conference)</label>
+          <label class="checklist__item"><input type="checkbox" value="Local Church Budget (LCB)"> Local Church Budget
+            (LCB)</label>
+          <label class="checklist__item"><input type="checkbox" value="Adventist Women (AWM)"> Adventist Women
+            (AWM)</label>
+          <label class="checklist__item"><input type="checkbox" value="Evangelism_conference"> Evangelism
+            (Conference)</label>
           <label class="checklist__item"><input type="checkbox" value="Evangelism"> Evangelism (Local church)</label>
           <label class="checklist__item"><input type="checkbox" value="Good Samaritan"> Good Samaritan</label>
           <label class="checklist__item"><input type="checkbox" value="Welfare"> Welfare</label>
-          <label class="checklist__item"><input type="checkbox" value="Adventist Youth (AYM)"> Adventist Youth (AYM)</label>
+          <label class="checklist__item"><input type="checkbox" value="Adventist Youth (AYM)"> Adventist Youth
+            (AYM)</label>
           <label class="checklist__item"><input type="checkbox" value="Adventist Men (AMO)"> Adventist Men (AMO)</label>
           <label class="checklist__item"><input type="checkbox" value="Lunch"> Lunch</label>
           <label class="checklist__item"><input type="checkbox" value="Pathfinder Club"> Pathfinder Club</label>
@@ -155,11 +157,7 @@
       <header class="paymodal__header">
         <div class="brand brand--compact">
           <div class="brand__logo">
-            <img
-              src="sda.png"
-              alt="Seventh-day Adventist Church logo"
-              class="brand__logo-img"
-            />
+            <img src="sda.png" alt="Seventh-day Adventist Church logo" class="brand__logo-img" />
           </div>
 
           <div class="brand__text">
@@ -186,14 +184,15 @@
           <div class="field">
             <label class="field__label" for="payerPhone">Phone Number (Safaricom) <span class="req">*</span></label>
             <input class="field__input field__input--soft" id="payerPhone" name="payerPhone" type="tel"
-                   placeholder="07XXXXXXXX" inputmode="numeric" required />
+              placeholder="07XXXXXXXX" inputmode="numeric" required />
           </div>
 
           <div class="payform__actions">
             <button type="button" class="btn btn--outline btn--back" id="payBackBtn">
               <span class="btn__icon btn__icon--left" aria-hidden="true">
                 <svg viewBox="0 0 24 24">
-                  <path d="M14 7l-5 5 5 5" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M14 7l-5 5 5 5" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
                 </svg>
               </span>
               Back
@@ -206,18 +205,27 @@
             <span>Return to Me all the Tithes Into the Storehouse</span><br />
             <span class="verse__ref">Malachi 3:10</span>
           </p>
+          <small style="display:block;width:100%;text-align:center;font-size:14px;margin-top:10px;">
+            Powered by
+            <a href="https://ke.zolasystems.net/" target="_blank" rel="noopener noreferrer"
+              style="font-weight:600;text-decoration:none;margin-left:4px;">
+              Zola System
+            </a>
+          </small>
+
         </form>
       </div>
     </div>
   </div>
   <footer class="site-footer" role="contentinfo">
-  <small class="site-footer__text">
-    Powered by
-    <a href="https://ke.zolasystems.net/" target="_blank" rel="noopener noreferrer" class="site-footer__link">
-      Zola System
-    </a>
-  </small>
-</footer>
- <script src="app.js"></script>
- </body>
+    <small class="site-footer__text">
+      Powered by
+      <a href="https://ke.zolasystems.net/" target="_blank" rel="noopener noreferrer" class="site-footer__link">
+        Zola System
+      </a>
+    </small>
+  </footer>
+  <script src="app.js"></script>
+</body>
+
 </html>
